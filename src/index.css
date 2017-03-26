@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+
+.nav-dark {
+    background-color: #47474C;
+    color: #ffffff;
+}
+
+.nav-dark a,
+.nav-dark a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.hero-body{
+
+}
+
+.title-main {
+    font-family: 'Raleway', serif !important;
+    font-size: 50px;
+    margin-top: 0;
+  
+}
+
+.title-more-space {
+    line-height: 2;
+}
+
+.skill {
+    margin-right: 40px;
+}
+
+.skill:last-child {
+    margin-right: 0;
+}
+
+.content {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+    
+}
+
+.background{
+    background-size: cover;
+}
+
+.extra{
+text-shadow: -10px 10px 0px #00e6e6,
+                 -20px 20px 0px #01cccc,
+                 -30px 30px 0px #00bdbd;
+}
