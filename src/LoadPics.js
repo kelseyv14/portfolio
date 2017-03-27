@@ -1,27 +1,29 @@
-import React, { Component } from 'react';
-
-class LoadPics extends Component {
-    // You only need constructor
-    constructor(props) {
-        super(props);
-
-        // Internal values that can change over time with this.setState({}) calls
-    //     this.state = {
-    //         style: ''
-    //     }
-    // }
-
-    // You can read incoming props, like title="", using this.props.title ...wrapping that in {} will output it to the screen
-    render() {
-        return <div className="columns is-gapless is-multiline is-mobile">
-        <figure className="inspoImages" onChange={() => this.setState({style:'image is-128x128'})}>
-            <div className="column is-one-quarter">
-                    <img className="picture" src = {this.props.picture} /> 
-            </div>
-        </figure>
+import React from 'react';
+ 
+class LoadPics extends React.Component {
+  renderImage(imageUrl) {
+    return (
+      <div className="columns is-6">
+        <img src={imageUrl} />
+      </div>
+    );
+  }
+ 
+  render() {
+    return (
+        <div className="columns is-gapless is-multiline is-mobile">
+        <div className="columns is-6">
+        <div className="section">
+       {this.props.imageUrls.map(imageUrl => this.renderImage(imageUrl))}
+       </div>
         </div>
-    }
+        </div>
+      
+    );
+  }
 }
-
+LoadPics.propTypes = {
+  imageUrls: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+};
 export default LoadPics;
 
